@@ -1,4 +1,4 @@
-<header class="h-[67px]">
+<header class="h-[67px] md:h-[112px]">
   <nav class="flex justify-between items-center mx-6 h-full">
     <div class="flex items-center gap-4">
       <img
@@ -7,29 +7,30 @@
         alt="menu"
       />
       <h1 class="mr-3 text-3xl font-bold">sneakers</h1>
+
+      <ul class="hidden md:inline-flex gap-8 text-gray-500">
+        <li>
+          <a href="#">Collections</a>
+        </li>
+        <li>
+          <a href="#">Men</a>
+        </li>
+        <li>
+          <a href="#">Women</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
     </div>
-    <ul class="hidden md:inline-flex">
-      <li>
-        <a href="#">Collections</a>
-      </li>
-      <li>
-        <a href="#">Men</a>
-      </li>
-      <li>
-        <a href="#">Women</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-    </ul>
 
     <div class="inline-flex gap-[22px]">
       <button class="relative">
         <span
-          class="absolute top-[-6px] text-xs text-white bg-orange-400 px-1.5 rounded-full"
+          class="absolute top-[-6px] md:top-1 text-xs text-white bg-orange-400 px-1.5 rounded-full"
           >3</span
         >
         <img
@@ -42,7 +43,7 @@
       <button>
         <img
           src="../../assets/images/image-avatar.png"
-          class="h-6 w-6"
+          class="h-6 w-6 md:h-[50px] md:w-[50px]"
           alt="avatar"
         />
       </button>
