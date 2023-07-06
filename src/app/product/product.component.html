@@ -1,4 +1,4 @@
-<div class="md:flex">
+<div class="md:flex max-w-[1110px] mx-auto">
   <div class="relative h-[320px] md:h-full md:w-1/2">
     <button
       (click)="onClick(-1)"
@@ -18,7 +18,7 @@
       <img src="../../assets/images/icon-next.svg" alt="next button" />
     </button>
 
-    <div class="flex w-full justify-between mt-4">
+    <div class="hidden md:flex w-full justify-between mt-4">
       <!-- <p>{{ thumbnail.id }} || {{ i }}</p> -->
       <div *ngFor="let thumbnail of thumbnails; let i = index">
         <div
