@@ -11,23 +11,23 @@ export class ProductComponent {
   thumbnails = [
     {
       id: 1,
-      thumbnail: '../images/image-product-1-thumbnail.jpg',
-      image: '../images/image-product-1.jpg',
+      thumbnail: '../../assets/images/image-product-1-thumbnail.jpg',
+      image: '../../images/image-product-1.jpg',
     },
     {
       id: 2,
-      thumbnail: '../images/image-product-2-thumbnail.jpg',
-      image: '../images/image-product-1.jpg',
+      thumbnail: '../../assets/images/image-product-1-thumbnail.jpg',
+      image: '../../images/image-product-1.jpg',
     },
     {
       id: 3,
-      thumbnail: '../images/image-product-3-thumbnail.jpg',
-      image: '../images/image-product-1.jpg',
+      thumbnail: '../../assets/images/image-product-1-thumbnail.jpg',
+      image: '../../images/image-product-1.jpg',
     },
     {
       id: 4,
-      thumbnail: '../images/image-product-4-thumbnail.jpg',
-      image: '../images/image-product-1.jpg',
+      thumbnail: '../../assets/images/image-product-1-thumbnail.jpg',
+      image: '../../images/image-product-1.jpg',
     },
   ];
 
@@ -40,6 +40,10 @@ export class ProductComponent {
     }
     this.currentImage += direction;
     // console.log(this.currentImage);
+  };
+
+  changeImage = (idx: number) => {
+    this.currentImage = idx;
   };
 
   modifyCart = (value: number) => {

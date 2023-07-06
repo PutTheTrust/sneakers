@@ -17,6 +17,28 @@
     >
       <img src="../../assets/images/icon-next.svg" alt="next button" />
     </button>
+
+    <div class="flex w-full justify-between mt-4">
+      <!-- <p>{{ thumbnail.id }} || {{ i }}</p> -->
+      <div *ngFor="let thumbnail of thumbnails; let i = index">
+        <div
+          [ngClass]="{
+            'outline outline-orange-500 rounded-lg outline-2':
+              currentImage === thumbnail.id
+          }"
+          (click)="changeImage(thumbnail.id)"
+        >
+          <img
+            class="w-[88px] rounded-lg hover:opacity-50 flex"
+            [ngClass]="{ 'opacity-50': currentImage === thumbnail.id }"
+            src="../../assets/images/image-product-{{
+              thumbnail.id
+            }}-thumbnail.jpg"
+            alt="thumbnail"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="mx-6 md:flex-1">
