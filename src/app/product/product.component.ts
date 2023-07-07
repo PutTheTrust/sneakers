@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CartServiceService } from '../cart-service.service';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css'],
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
   quantity = 0;
+  numberOfProduct = 0;
   currentImage = 1;
   thumbnails = [
     {
@@ -31,6 +33,11 @@ export class ProductComponent {
     },
   ];
 
+  constructor(private cartService: CartServiceService) {}
+  ngOnInit(): void {
+    // throw new Error('Method not implemented.');
+  }
+
   onClick = (direction: number) => {
     if (
       this.currentImage + direction < 1 ||
@@ -53,4 +60,9 @@ export class ProductComponent {
 
     this.quantity += value;
   };
+
+  addToCart(value: number) {
+    this.cartService.addToCart(value);
+    window.alert('Your product has been added to the cart!');
+  }
 }
