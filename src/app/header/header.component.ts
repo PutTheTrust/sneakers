@@ -12,6 +12,10 @@ export class HeaderComponent implements OnInit {
     // this.productCount = this.cartService.numberOfProduct;
   }
 
+  ToggleCart(): void {
+    this.cartService.toggleCart();
+  }
+
   get productCount(): number {
     return this.cartService.numberOfProduct;
   }

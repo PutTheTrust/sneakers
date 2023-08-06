@@ -9,6 +9,7 @@ import { CartServiceService } from '../cart-service.service';
 export class CartComponent implements OnInit {
   // numberOfProduct = this.cartService.getItems();
   constructor(private cartService: CartServiceService) {}
+  isOpen = this.cartService.isOpen;
 
   get productCount(): number {
     return this.cartService.numberOfProduct;
@@ -16,6 +17,14 @@ export class CartComponent implements OnInit {
 
   EmptyCart(): void {
     this.cartService.clearCart();
+  }
+
+  // ToggleCart(): void {
+  //   this.isOpen = !this.isOpen;
+  // }
+
+  get openStat(): boolean {
+    return this.cartService.isOpen;
   }
 
   ngOnInit(): void {

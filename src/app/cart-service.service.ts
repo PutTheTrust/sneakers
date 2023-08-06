@@ -7,6 +7,12 @@ import { Subject } from 'rxjs';
 export class CartServiceService {
   numberOfProduct = 0;
   numberOfProductChange: Subject<number> = new Subject<number>();
+  isOpen = false;
+  isOpenChange: Subject<boolean> = new Subject<boolean>();
+
+  toggleCart() {
+    this.isOpen = !this.isOpen;
+  }
 
   addToCart(product: number) {
     this.numberOfProduct += product;
